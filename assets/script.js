@@ -27,8 +27,12 @@
 
 //Machine chooses a number and then 
 // 1 = rock; 2 = paper; 3 = scissors
+
+//Declare all my variables outside of the functions
+var machineChoice;
+
 function machineSelection() {
-    var machineChoice = Math.floor(Math.random() * 3) + 1;
+    machineChoice = Math.floor(Math.random() * 3) + 1;
     if (machineChoice == 1) {
         machineChoice = "rock";
     } else if (machineChoice == 2) {
@@ -37,7 +41,7 @@ function machineSelection() {
         machineChoice = "scissors";
     } else {
         //if my math function is not correct, catch it and show it in the console log for testing
-        console.log(machineChoice);
+        //console.log(machineChoice);
     }
 }
 
@@ -89,11 +93,13 @@ function userRock(){
     } else {
         //check what is happening if its not working
         //console.log(userRock + machineChoice);
+        //NOT NEEDED ITS WORKING NOW AND THIS CONSOLE LOG ACTUALLY NEVER WORKED!!!
     }
 }
 
 //cover userScissors
 function userScissors(){
+    this.machineSelection();
     if (machineChoice == "scissors") {
         tie();
     } else if (machineChoice == "paper") {
@@ -102,12 +108,13 @@ function userScissors(){
         machineWins();
     } else {
         //check what is happening if its not working
-        console.log(userScissors + machineChoice);
+        //console.log(userScissors + machineChoice);
     }
 }
 
 //cover userPaper
 function userPaper(){
+    this.machineSelection();
     if (machineChoice == "paper") {
         tie();
     } else if (machineChoice == "rock") {
@@ -116,6 +123,6 @@ function userPaper(){
         machineWins();
     } else {
         //check what is happening if its not working
-        console.log(userPaper + machineChoice);
+        //console.log(userPaper + machineChoice);
     }
 }
