@@ -60,15 +60,31 @@ if (machineOption == 1 && userOption == 1) {
     //tie
 }
 */
+//functions to save the possibilities
+//Ideally they would receive both the user choice and the machine choice to show it? Don't know how to do it
+function tie() {
+    alert("This is a tie!")
+    //I need a function to keep scores!
+}
+
+function userWins() {
+    alert("You won!")
+    //Same, needs a function for the scores!
+}
+
+function machineWins() {
+    alert("The machine won!")
+    //Function for keeping scores needed
+}
 
 //covers userRock
 function userRock(){
     if (machineChoice == "rock") {
-        //tie
+        tie();
     } else if (machineChoice == "scissors") {
-        //user wins
+        userWins();
     } else if (machineChoice == "paper") {
-        //machine wins
+        machineWins();
     } else {
         //check what is happening if its not working
         console.log(userRock + machineChoice);
@@ -78,11 +94,11 @@ function userRock(){
 //cover userScissors
 function userScissors(){
     if (machineChoice == "scissors") {
-        //tie
+        tie();
     } else if (machineChoice == "paper") {
-        //user wins
+        userWins();
     } else if (machineChoice == "rock") {
-        //machine wins
+        machineWins();
     } else {
         //check what is happening if its not working
         console.log(userScissors + machineChoice);
@@ -92,11 +108,11 @@ function userScissors(){
 //cover userPaper
 function userPaper(){
     if (machineChoice == "paper") {
-        //tie
+        tie();
     } else if (machineChoice == "rock") {
-        //user wins
+        userWins();
     } else if (machineChoice == "scissors") {
-        //machine wins
+        machineWins();
     } else {
         //check what is happening if its not working
         console.log(userPaper + machineChoice);
