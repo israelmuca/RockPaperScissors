@@ -43,13 +43,15 @@ function machineSelection() {
 
 //We save the user's option to a variable
 // 1 = rock; 2 = paper; 3 = scissor
-var userOption = document.getElementById(button);
+//Not needed anymore, as we'll validate each button individually?
+//var userOption = document.getElementById(button);
 
 //Function to catch the clicks?
 //NOOOO, every button is a function that compares it to the computer's "choice"
 
 
 //covers ties
+/* Deprecated
 if (machineOption == 1 && userOption == 1) {
     //tie
 } else if (machineOption == 2 && userOption == 2) {
@@ -57,15 +59,46 @@ if (machineOption == 1 && userOption == 1) {
 } else if (machineOption == 3 && userOption == 3) {
     //tie
 }
+*/
 
-//cover userRock vs machineScissors
-//cover userRock vs machinePaper
+//covers userRock
 function userRock(){
-
+    if (machineChoice == "rock") {
+        //tie
+    } else if (machineChoice == "scissors") {
+        //user wins
+    } else if (machineChoice == "paper") {
+        //machine wins
+    } else {
+        //check what is happening if its not working
+        console.log(userRock + machineChoice);
+    }
 }
 
-//cover userScissors vs machineRock
-//cover userScissors vs machinePaper
+//cover userScissors
+function userScissors(){
+    if (machineChoice == "scissors") {
+        //tie
+    } else if (machineChoice == "paper") {
+        //user wins
+    } else if (machineChoice == "rock") {
+        //machine wins
+    } else {
+        //check what is happening if its not working
+        console.log(userScissors + machineChoice);
+    }
+}
 
-//cover userPaper vs machineRock
-//cover userPaper vs machineScissors
+//cover userPaper
+function userPaper(){
+    if (machineChoice == "paper") {
+        //tie
+    } else if (machineChoice == "rock") {
+        //user wins
+    } else if (machineChoice == "scissors") {
+        //machine wins
+    } else {
+        //check what is happening if its not working
+        console.log(userPaper + machineChoice);
+    }
+}
