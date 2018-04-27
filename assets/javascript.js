@@ -26,21 +26,23 @@
 */
 
 //Declare all my variables outside of the functions
-var machineChoice;
-var userChoice;
+var machineChoiceNum;
+var machineChoiceWor;
+var userChoiceWor;
 var tieScore = 0;
 var userScore = 0;
 var machineScore = 0;
 
 //Function to make the machine select an option randomly
 function machineSelection() {
-    machineChoice = Math.floor(Math.random() * 3) + 1;
-    if (machineChoice == 1) {
-        machineChoice = "rock";
-    } else if (machineChoice == 2) {
-        machineChoice = "paper";
-    } else if (machineChoice == 3) {
-        machineChoice = "scissors";
+    machineChoiceNum = Math.floor(Math.random() * 3) + 1;
+    machineChoiceWor = "";
+    if (machineChoiceNum == 1) {
+        machineChoiceWor = "rock";
+    } else if (machineChoiceNum == 2) {
+        machineChoiceWor = "paper";
+    } else if (machineChoiceNum == 3) {
+        machineChoiceWor = "scissors";
     } else {
         //Here for testing purposes if needed
         //console.log(machineChoice);
@@ -51,14 +53,14 @@ function machineSelection() {
 
 //Function for when the user chooses rock
 function userRock(){
-    userChoice = "rock";
+    userChoiceWor = "rock";
     this.machineSelection();
-    if (machineChoice == "rock") {
-        tie(userChoice, machineChoice);
-    } else if (machineChoice == "scissors") {
-        userWins(userChoice, machineChoice);
-    } else if (machineChoice == "paper") {
-        machineWins(userChoice, machineChoice);
+    if (machineChoiceWor == "rock") {
+        tie(userChoiceWor, machineChoiceWor);
+    } else if (machineChoiceWor == "scissors") {
+        userWins(userChoiceWor, machineChoiceWor);
+    } else if (machineChoiceWor == "paper") {
+        machineWins(userChoiceWor, machineChoiceWor);
     } else {
         //Here for testing purposes if needed
         //console.log(machineChoice);
@@ -67,14 +69,14 @@ function userRock(){
 
 //Function for when the user chooses scissors
 function userScissors(){
-    userChoice = "scissors";
+    userChoiceWor = "scissors";
     this.machineSelection();
-    if (machineChoice == "scissors") {
-        tie(userChoice, machineChoice);
-    } else if (machineChoice == "paper") {
-        userWins(userChoice, machineChoice);
-    } else if (machineChoice == "rock") {
-        machineWins(userChoice, machineChoice);
+    if (machineChoiceWor == "scissors") {
+        tie(userChoiceWor, machineChoiceWor);
+    } else if (machineChoiceWor == "paper") {
+        userWins(userChoiceWor, machineChoiceWor);
+    } else if (machineChoiceWor == "rock") {
+        machineWins(userChoiceWor, machineChoiceWor);
     } else {
         //Here for testing purposes if needed
         //console.log(machineChoice);
@@ -85,12 +87,12 @@ function userScissors(){
 function userPaper(){
     userChoice = "paper";
     this.machineSelection();
-    if (machineChoice == "paper") {
-        tie(userChoice, machineChoice);
-    } else if (machineChoice == "rock") {
-        userWins(userChoice, machineChoice);
-    } else if (machineChoice == "scissors") {
-        machineWins(userChoice, machineChoice);
+    if (machineChoiceWor == "paper") {
+        tie(userChoiceWor, machineChoiceWor);
+    } else if (machineChoiceWor == "rock") {
+        userWins(userChoiceWor, machineChoiceWor);
+    } else if (machineChoiceWor == "scissors") {
+        machineWins(userChoiceWor, machineChoiceWor);
     } else {
         //Here for testing purposes if needed
         //console.log(machineChoice);
@@ -98,20 +100,20 @@ function userPaper(){
 }
 
 //Functions for each possibility, with alerts for the user
-function tie(userChoice, machineChoice) {
-    alert("You chose " + userChoice + " and the machine chose " + machineChoice + "\nSooo, this is a tie!")
+function tie(userChoiceWor, machineChoiceWor) {
+    alert("You chose " + userChoiceWor + " and the machine chose " + machineChoiceWor + "\nSooo, this is a tie!")
     this.noOneScored();
     alert("The current score is: \n" + tieScore + " ties. \n" + userScore + " wins by the user. \n" + machineScore + " wins by the machine.")
 }
 
-function userWins(userChoice, machineChoice) {
-    alert("You chose " + userChoice + " and the machine chose " + machineChoice + "\nSooo, you won!")
+function userWins(userChoiceWor, machineChoiceWor) {
+    alert("You chose " + userChoiceWor + " and the machine chose " + machineChoiceWor + "\nSooo, you won!")
     this.userScored();
     alert("The current score is: \n" + tieScore + " ties. \n" + userScore + " wins by the user. \n" + machineScore + " wins by the machine.")
 }
 
-function machineWins(userChoice, machineChoice) {
-    alert("You chose " + userChoice + " and the machine chose " + machineChoice + "\nSooo, the machine won!")
+function machineWins(userChoiceWor, machineChoiceWor) {
+    alert("You chose " + userChoiceWor + " and the machine chose " + machineChoiceWor + "\nSooo, the machine won!")
     this.machineScored();
     alert("The current score is: \n" + tieScore + " ties. \n" + userScore + " wins by the user. \n" + machineScore + " wins by the machine.")
 }
