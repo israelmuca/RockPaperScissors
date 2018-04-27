@@ -1,4 +1,5 @@
 /*
+    PSEUDOCODE - Here for legacy reasons
     1) Start with a screen with 3 options
     1.1) have 3 buttons
     2) Get user input for which of the 3 options he'd like to play with
@@ -23,14 +24,15 @@
     }
 */
 
-//I'm not sure when I should be calling the function machineSelection(), but I'm positive it will do the job required
 
-//Machine chooses a number and then 
-// 1 = rock; 2 = paper; 3 = scissors
 
 //Declare all my variables outside of the functions
 var machineChoice;
 
+/*Function to keep score
+To be worked at a later date */
+
+//Function to make the machine select an option randomly
 function machineSelection() {
     machineChoice = Math.floor(Math.random() * 3) + 1;
     if (machineChoice == 1) {
@@ -40,48 +42,29 @@ function machineSelection() {
     } else if (machineChoice == 3) {
         machineChoice = "scissors";
     } else {
-        //if my math function is not correct, catch it and show it in the console log for testing
+        //Here for testing purposes if needed
         //console.log(machineChoice);
     }
 }
 
-//We save the user's option to a variable
-// 1 = rock; 2 = paper; 3 = scissor
-//Not needed anymore, as we'll validate each button individually?
-//var userOption = document.getElementById(button);
 
-//Function to catch the clicks?
-//NOOOO, every button is a function that compares it to the computer's "choice"
-
-
-//covers ties
-/* Deprecated
-if (machineOption == 1 && userOption == 1) {
-    //tie
-} else if (machineOption == 2 && userOption == 2) {
-    //tie
-} else if (machineOption == 3 && userOption == 3) {
-    //tie
-}
-*/
-//functions to save the possibilities
-//Ideally they would receive both the user choice and the machine choice to show it? Don't know how to do it
+/*Functions to save the possibilities
+//Ideally they would receive both the user choice and the machine choice to show it.
+To be worked at a later date */
 function tie() {
     alert("This is a tie!")
-    //I need a function to keep scores!
 }
 
 function userWins() {
     alert("You won!")
-    //Same, needs a function for the scores!
 }
 
 function machineWins() {
     alert("The machine won!")
-    //Function for keeping scores needed
 }
 
-//covers userRock
+
+//covers user choosing rock
 function userRock(){
     this.machineSelection();
     if (machineChoice == "rock") {
@@ -91,9 +74,8 @@ function userRock(){
     } else if (machineChoice == "paper") {
         machineWins();
     } else {
-        //check what is happening if its not working
-        //console.log(userRock + machineChoice);
-        //NOT NEEDED ITS WORKING NOW AND THIS CONSOLE LOG ACTUALLY NEVER WORKED!!!
+        //Here for testing purposes if needed
+        //console.log(machineChoice);
     }
 }
 
@@ -107,8 +89,8 @@ function userScissors(){
     } else if (machineChoice == "rock") {
         machineWins();
     } else {
-        //check what is happening if its not working
-        //console.log(userScissors + machineChoice);
+        //Here for testing purposes if needed
+        //console.log(machineChoice);
     }
 }
 
@@ -122,7 +104,7 @@ function userPaper(){
     } else if (machineChoice == "scissors") {
         machineWins();
     } else {
-        //check what is happening if its not working
-        //console.log(userPaper + machineChoice);
+        //Here for testing purposes if needed
+        //console.log(machineChoice);
     }
 }
