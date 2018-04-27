@@ -23,13 +23,30 @@
     }
 */
 
+//I'm not sure when I should be calling the function machineSelection(), but I'm positive it will do the job required
+
 //Machine chooses a number and then 
-// 1 = rock; 2 = paper; 3 = scissor
-var machineOption = Math.floor(Math.random() * 3) + 1;
+// 1 = rock; 2 = paper; 3 = scissors
+function machineSelection() {
+    var machineChoice = Math.floor(Math.random() * 3) + 1;
+    if (machineChoice == 1) {
+        machineChoice = "rock";
+    } else if (machineChoice == 2) {
+        machineChoice = "paper";
+    } else if (machineChoice == 3) {
+        machineChoice = "scissors";
+    } else {
+        //if my math function is not correct, catch it and show it in the console log for testing
+        console.log(machineChoice);
+    }
+}
 
 //We save the user's option to a variable
 // 1 = rock; 2 = paper; 3 = scissor
 var userOption = document.getElementById(button);
+
+//Function to catch the clicks?
+//NOOOO, every button is a function that compares it to the computer's "choice"
 
 
 //covers ties
@@ -43,6 +60,9 @@ if (machineOption == 1 && userOption == 1) {
 
 //cover userRock vs machineScissors
 //cover userRock vs machinePaper
+function userRock(){
+
+}
 
 //cover userScissors vs machineRock
 //cover userScissors vs machinePaper
