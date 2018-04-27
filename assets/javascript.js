@@ -29,6 +29,7 @@
 
 //Declare all my variables outside of the functions
 var machineChoice;
+var userChoice;
 var tieScore = 0;
 var userScore = 0;
 var machineScore = 0;
@@ -67,20 +68,20 @@ function machineSelection() {
 /*Functions to save the possibilities
 //Ideally they would receive both the user choice and the machine choice to show it.
 To be worked at a later date */
-function tie() {
-    alert("This is a tie!")
+function tie(userChoice, machineChoice) {
+    alert("You chose " + userChoice + " and the machine chose " + machineChoice + "\n Sooo, this is a tie!")
     this.noOneScored();
     alert("The current score is: \n" + tieScore + " ties. \n" + userScore + " wins by the user. \n" + machineScore + " wins by the machine.")
 }
 
-function userWins() {
-    alert("You won!")
+function userWins(userChoice, machineChoice) {
+    alert("You chose " + userChoice + " and the machine chose " + machineChoice + "\n Sooo, you won!")
     this.userScored();
     alert("The current score is: \n" + tieScore + " ties. \n" + userScore + " wins by the user. \n" + machineScore + " wins by the machine.")
 }
 
-function machineWins() {
-    alert("The machine won!")
+function machineWins(userChoice, machineChoice) {
+    alert("You chose " + userChoice + " and the machine chose " + machineChoice + "\n Sooo, the machine won!")
     this.machineScored();
     alert("The current score is: \n" + tieScore + " ties. \n" + userScore + " wins by the user. \n" + machineScore + " wins by the machine.")
 }
@@ -88,13 +89,14 @@ function machineWins() {
 
 //covers user choosing rock
 function userRock(){
+    userChoice = "rock";
     this.machineSelection();
     if (machineChoice == "rock") {
-        tie();
+        tie(userChoice, machineChoice);
     } else if (machineChoice == "scissors") {
-        userWins();
+        userWins(userChoice, machineChoice);
     } else if (machineChoice == "paper") {
-        machineWins();
+        machineWins(userChoice, machineChoice);
     } else {
         //Here for testing purposes if needed
         //console.log(machineChoice);
@@ -103,13 +105,14 @@ function userRock(){
 
 //cover userScissors
 function userScissors(){
+    userChoice = "scissors";
     this.machineSelection();
     if (machineChoice == "scissors") {
-        tie();
+        tie(userChoice, machineChoice);
     } else if (machineChoice == "paper") {
-        userWins();
+        userWins(userChoice, machineChoice);
     } else if (machineChoice == "rock") {
-        machineWins();
+        machineWins(userChoice, machineChoice);
     } else {
         //Here for testing purposes if needed
         //console.log(machineChoice);
@@ -118,13 +121,14 @@ function userScissors(){
 
 //cover userPaper
 function userPaper(){
+    userChoice = "paper";
     this.machineSelection();
     if (machineChoice == "paper") {
-        tie();
+        tie(userChoice, machineChoice);
     } else if (machineChoice == "rock") {
-        userWins();
+        userWins(userChoice, machineChoice);
     } else if (machineChoice == "scissors") {
-        machineWins();
+        machineWins(userChoice, machineChoice);
     } else {
         //Here for testing purposes if needed
         //console.log(machineChoice);
