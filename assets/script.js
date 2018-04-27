@@ -79,11 +79,12 @@ function machineWins() {
 
 //covers userRock
 function userRock(){
-    if (machineSelection == "rock") {
+    this.machineSelection();
+    if (machineChoice == "rock") {
         tie();
-    } else if (machineSelection == "scissors") {
+    } else if (machineChoice == "scissors") {
         userWins();
-    } else if (machineSelection == "paper") {
+    } else if (machineChoice == "paper") {
         machineWins();
     } else {
         //check what is happening if its not working
