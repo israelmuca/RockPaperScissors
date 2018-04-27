@@ -79,15 +79,15 @@ function machineWins() {
 
 //covers userRock
 function userRock(){
-    if (machineChoice == "rock") {
+    if (machineSelection == "rock") {
         tie();
-    } else if (machineChoice == "scissors") {
+    } else if (machineSelection == "scissors") {
         userWins();
-    } else if (machineChoice == "paper") {
+    } else if (machineSelection == "paper") {
         machineWins();
     } else {
         //check what is happening if its not working
-        console.log(userRock + machineChoice);
+        //console.log(userRock + machineChoice);
     }
 }
 
