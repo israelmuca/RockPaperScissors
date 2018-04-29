@@ -109,13 +109,11 @@ function tie(userChoiceWor, machineChoiceWor) {
 function userWins(userChoiceWor, machineChoiceWor) {
     alert("You chose " + userChoiceWor + " and the machine chose " + machineChoiceWor + "\nSooo, you won!")
     this.userScored();
-    alert("The current score is: \n" + tieScore + " ties. \n" + userScore + " wins by the user. \n" + machineScore + " wins by the machine.")
 }
 
 function machineWins(userChoiceWor, machineChoiceWor) {
     alert("You chose " + userChoiceWor + " and the machine chose " + machineChoiceWor + "\nSooo, the machine won!")
     this.machineScored();
-    alert("The current score is: \n" + tieScore + " ties. \n" + userScore + " wins by the user. \n" + machineScore + " wins by the machine.")
 }
 
 /* Functions to keep score
@@ -126,8 +124,10 @@ function noOneScored() {
 
 function userScored() {
     userScore+=1;
+    document.getElementById("HumanScoreText").innerHTML = userScore;
 }
 
 function machineScored() {
     machineScore+=1;
+    document.getElementById("ComputerScoreText").innerHTML = machineScore;
 }
