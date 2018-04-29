@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rock, Paper, Scissors</title>
+    <!-- Using Bootstrap's CDN for version 4.1.0 -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
+</head>
+<body>
+    <span id="container col-md-6">
+        <div class="jumbotron">
+                <h1 class="display-4">Rock Paper and Scissors!</h1>
+                <p class="lead">Ready to play against the machine?!</p>
+                <hr class="my-4">
+                <p>So, choose one of three options below!</p>
+                <button type="button" onclick="userRock()" class="btn btn-secondary" id="rock">Rock</button>
+                <button type="button" onclick="userPaper()" class="btn btn-secondary" id="paper">Paper</button>
+                <button type="button" onclick="userScissors()" class="btn btn-secondary" id"scissors">Scissors</button>
+        </div>
+    </span>
+
+    <!-- Using our own JS file for the scripts -->
+    <script type="text/javascript" src="assets/javascript.js"></script>
+</body>
+</html>
