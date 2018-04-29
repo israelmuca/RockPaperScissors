@@ -112,7 +112,6 @@ function userPaper(){
 function tie(userChoiceWor, machineChoiceWor) {
     alert("You chose " + userChoiceWor + " and the machine chose " + machineChoiceWor + "\nSooo, this is a tie!")
     this.noOneScored();
-    alert("The current score is: \n" + tieScore + " ties. \n" + userScore + " wins by the user. \n" + machineScore + " wins by the machine.")
 }
 
 function userWins(userChoiceWor, machineChoiceWor) {
@@ -129,6 +128,7 @@ function machineWins(userChoiceWor, machineChoiceWor) {
 Most surely there's a way to do it all in one function, will do it on 3 different functions for now */
 function noOneScored() {
     tieScore+=1;
+    document.getElementById("TiesScoreText").innerHTML = tieScore;
 }
 
 function userScored() {
