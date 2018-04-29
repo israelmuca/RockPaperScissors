@@ -34,16 +34,16 @@ var machineName;
 var tieScore = 0;
 var userScore = 0;
 var machineScore = 0;
-var audioSetting;
-var audioControl;
+var audioElement;
+var audioPreference;
 
 //Set user's preference for audio
-audioSetting = document.getElementById("myAudio");
-audioControl = confirm("Would you like some cool background music?");
-if (audioControl) {
-    audioSetting.play();
+audioElement = document.getElementById("myAudio");
+audioPreference = confirm("Would you like some cool background music?");
+if (audioPreference) {
+    audioElement.play();
 } else {
-    audioSetting.pause();
+    audioElement.pause();
 }
 
 
