@@ -94,7 +94,7 @@ function userScissors(){
 
 //Function for when the user chooses paper
 function userPaper(){
-    userChoice = "paper";
+    userChoiceWor = "paper";
     this.machineSelection();
     if (machineChoiceWor == "paper") {
         tie(userChoiceWor, machineChoiceWor);
