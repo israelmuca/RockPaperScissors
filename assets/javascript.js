@@ -34,6 +34,18 @@ var machineName;
 var tieScore = 0;
 var userScore = 0;
 var machineScore = 0;
+var audioSetting;
+var audioControl;
+
+//Set user's preference for audio
+audioSetting = document.getElementById("myAudio");
+audioControl = confirm("Would you like some cool background music?");
+if (audioControl) {
+    audioSetting.play();
+} else {
+    audioSetting.pause();
+}
+
 
 //Get both the user and machine's name and push it to the HTML
 var userName = prompt("What's your name?", "Write your name");
