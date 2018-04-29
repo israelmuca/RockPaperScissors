@@ -29,9 +29,18 @@
 var machineChoiceNum;
 var machineChoiceWor;
 var userChoiceWor;
+var userName;
+var machineName;
 var tieScore = 0;
 var userScore = 0;
 var machineScore = 0;
+
+//Get both the user and machine's name and push it to the HTML
+var userName = prompt("What's your name?", "Write your name");
+var machineName = prompt("Name the computer! Or leave the default name!", "Jedi Master Yoda");
+
+document.getElementById("HumanName").innerHTML = "<h3>" + userName + "</h3>";
+document.getElementById("ComputerName").innerHTML = "<h3>" + machineName + "</h3>";
 
 //Function to make the machine select an option randomly
 function machineSelection() {
