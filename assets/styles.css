@@ -2,16 +2,6 @@ body {
     background-color: olivedrab;
 }
 
-.row {
-    background-color: olivedrab;
-    text-align: center;
-}
-
-#gametitle {
-    color: #007bff;
-    background-color: black;
-}
-
 h1 {
     font-size: 30px;
     font-weight: bold;
@@ -26,6 +16,12 @@ h3 {
     font-size: 24px;
     font-weight: bold;
     color: black;
+}
+
+p {
+    color:black;
+    font-size: 24px;
+    font-weight: bold; 
 }
 
 #warrior {
@@ -43,6 +39,21 @@ h3 {
 
 #scissors {
     background-color: silver;
+}
+
+#gametitle {
+    color: #007bff;
+    background-color: black;
+}
+
+#footer {
+    background-color: black;
+    text-align: center;
+}
+
+.row {
+    background-color: olivedrab;
+    text-align: center;
 }
 
 .btn-rock, .btn-paper, .btn-scissors {
@@ -68,17 +79,10 @@ h3 {
     outline-style: groove;
 }
 
-p {
-    color:black;
-    font-size: 24px;
-    font-weight: bold; 
-}
-
 .p2 {
     color: #212529;
 }
 
-#footer {
-    background-color: black;
-    text-align: center;
+.name {
+    color: azure;
 }
