@@ -38,13 +38,13 @@ var audioElement;
 var audioPreference;
 
 //Set user's preference for audio
-audioElement = document.getElementById("myAudio");
+/* audioElement = document.getElementById("myAudio");
 audioPreference = confirm("Would you like some cool background music?");
 if (audioPreference) {
     audioElement.play();
 } else {
     audioElement.pause();
-}
+} */
 
 
 //Get both the user and machine's name and push it to the HTML
